@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Socket Test</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="http://localhost:4444/socket.io/socket.io.js"></script>
+    <script type="text/javascript">
+        var socket;
+        $(document).ready(function () {
+            socket = io.connect("http://localhost:4444");
+            socket.on("all", function (obj) {
+                console.info(obj);
+            });
+            socket.on("1a2b3c", function (obj) {
+                console.info(obj);
+            })
+        })
+
+    </script>
+</head>
+<body>
+    <h1>this is socket client!</h1>
+</body>
+</html>
