@@ -8,7 +8,10 @@ var sub = express();//二级目录
 var http = require("http").createServer(app)
 var subHttp = require("http").createServer(sub);
 var serverSocket = require("socket.io")(http)
-
+var abl = require("./lib/bl/abl");
+var bbl = require("./lib/bl/abl");
+abl.select();
+bbl.select();
 app.use(express.static(path.join(__dirname,"public")));
 serverSocket.on("connection", function (socket) {
     console.info("this is socketServer!");
@@ -35,5 +38,4 @@ http.listen("4444", function () {
 subHttp.listen("3333", function () {
     console.info("server listen on 3333 port!");
 });
-
 module.exports = app;

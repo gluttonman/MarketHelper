@@ -1,0 +1,7 @@
+{
+  "connectionLimit": 10,
+  "host": "192.168.1.250",
+  "user":"root",
+  "password" : "root",
+  "database": "fdd_test"
+}
