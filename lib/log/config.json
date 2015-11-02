@@ -1,0 +1,26 @@
+{
+  "appenders": [
+    {
+      "type": "console",
+      "category" : "console"
+    },
+    {
+      "type": "dateFile",
+      "absolute": true,
+      "filename": "logs/access",
+      "pattern" : "_yyy_MM_dd.log",
+      "category": "access"
+    },
+    {
+      "type": "dateFile",
+      "pattern" : "_yyyy_MM_dd.log",
+      "filename": "logs/error",
+      "alwaysIncludePattern": true,
+      "category": "error"
+    }
+  ],
+  "replaceControle" : "true",
+  "levels": {
+    "error": "DEBUG"
+  }
+}

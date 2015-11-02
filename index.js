@@ -10,6 +10,8 @@ var subHttp = require("http").createServer(sub);
 var serverSocket = require("socket.io")(http)
 var abl = require("./lib/bl/abl");
 var bbl = require("./lib/bl/abl");
+var log = require("./lib/log/log");
+log.error("this is main.js")
 abl.select();
 bbl.select();
 app.use(express.static(path.join(__dirname,"public")));
