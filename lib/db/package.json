@@ -1,0 +1,17 @@
+{
+  "name": "@fdd-npm/db",
+  "version": "1.0.0",
+  "description": "pakage depandence node-mysql",
+  "main": "db.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "db",
+    "database",
+    "mysql",
+    "node-mysql"
+  ],
+  "author": "lijun",
+  "license": "ISC"
+}
