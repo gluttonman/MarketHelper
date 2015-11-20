@@ -48,8 +48,8 @@ gulp.task("injectJS", function () {
 
 
 gulp.task("injectCSS", function () {
-    var cssPath = "sales_ionic/css", concatName = "fdd_style_"+dateformat(new Date(),"yyyymmddhhMMss")+".css";
-    var target = gulp.src("sales_ionic/index.html");
+    var cssPath = "public/lib/css", concatName = "fdd_style_"+dateformat(new Date(),"yyyymmddhhMMss")+".css";
+    var target = gulp.src("public/index.html");
     var sourceCSS = [];
     sourceCSS.push(cssPath + "/style.css");
 
@@ -58,8 +58,8 @@ gulp.task("injectCSS", function () {
         var miniSource = source.pipe(rename(function (path) {
             path.extname = ".min.css";
         })).pipe(minifyCSS()).pipe(gulp.dest(cssPath));
-        return target.pipe(inject(miniSource, {relative: true})).pipe(gulp.dest("sales_ionic/"));
+        return target.pipe(inject(miniSource, {relative: true})).pipe(gulp.dest("public/"));
     } else {
-        return target.pipe(inject(source, {relative: true})).pipe(gulp.dest("sales_ionic/"));
+        return target.pipe(inject(source, {relative: true})).pipe(gulp.dest("public/"));
     }
 });
